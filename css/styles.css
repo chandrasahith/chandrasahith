@@ -67,15 +67,22 @@ a {
     transition: width 0.25s ease;
 }
 
-.nav a:hover,
+
 .nav a.active {
     color: var(--text);
 }
 
-.nav a:hover::after,
+
 .nav a.active::after {
-    width: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 1px;
+    background: var(--text);
 }
+
 
 .hero {
     min-height: 100vh;
@@ -222,4 +229,48 @@ a {
 
 section:not(.hero) {
     min-height: 100vh;
+}
+/* About */
+
+.about-section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 70px;
+    padding: 140px 10% 100px;
+}
+
+.section-label {
+    padding-top: 10px;
+}
+
+.section-label span {
+    color: var(--soft);
+    font-size: 16px;
+    letter-spacing: 0.14em;
+}
+
+.about-content {
+    max-width: 760px;
+}
+
+.about-content h2 {
+    margin: 0 0 36px;
+    color: var(--text);
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.about-content p {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.about-content strong {
+    color: var(--text);
+    font-weight: 400;
 }
