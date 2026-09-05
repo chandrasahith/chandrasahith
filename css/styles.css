@@ -468,3 +468,26 @@ section:not(.hero) {
 .nav a.active::after {
     width: 100%;
 }
+.site-footer {
+    padding: 1px 13% 35px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--soft);
+    font-size: 16px;
+    font-weight: 400;
+}
+.site-footer .built-by {
+    margin: 0;
+    padding: 10px;
+    color: var(--soft);
+    font-size: 14px;
+}
+
+.site-footer .built-by span {
+    color: var(--text);
+    font-family: Georgia, serif;
+    font-style: italic;
+}
