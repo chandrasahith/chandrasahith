@@ -56,32 +56,12 @@ a {
     transition: color 0.25s ease;
 }
 
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 1px;
-    background: var(--text);
-    transition: width 0.25s ease;
-}
-
 
 .nav a.active {
     color: var(--text);
 }
 
 
-.nav a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -10px;
-    height: 1px;
-    background: var(--text);
-}
 
 
 .hero {
@@ -465,4 +445,26 @@ section:not(.hero) {
     .education-details span {
         font-size: 14px;
     }
+}
+/* Active navigation underline */
+
+.nav a {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--text);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+.nav a.active::after {
+    width: 100%;
 }
