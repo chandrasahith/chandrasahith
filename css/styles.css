@@ -274,3 +274,96 @@ section:not(.hero) {
     color: var(--text);
     font-weight: 400;
 }
+/* Skills */
+
+.skills-section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 35px;
+    padding: 140px 10% 120px;
+}
+
+.skills-content {
+    max-width: 1050px;
+}
+
+.skills-content h2 {
+    margin: 0 0 60px;
+    color: var(--text);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.skills-list {
+    width: 100%;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 35px;
+    align-items: start;
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+}
+
+.skill-row:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.skill-row h3 {
+    margin: 4px 0 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 17px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-tags span:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 700px) {
+    .skills-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 110px 7% 80px;
+    }
+
+    .skills-content h2 {
+        margin-bottom: 45px;
+    }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .skill-tags span {
+        min-height: 38px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+}
